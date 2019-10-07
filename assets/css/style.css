@@ -1,0 +1,14 @@
+body { 
+    background-image: url(https://3.bp.blogspot.com/-cW19DjLn2PI/W_dFfzHaMlI/AAAAAAAAAQQ/HPW9Md1DzBUdM4-6FNAkP79KhiuF5iXUwCHMYCw/s1600/final-fantasy-tactics-wallpaper-and-background-image-1366x768.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: black;
+}
+
+.button {
+    height: 125px;
+    width: 100px;
+    background-color: white;
+    border: 10px solid black;
+    border-radius: 25%
+}
