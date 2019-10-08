@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="assets/transfonter.org-20191008-124655/stylesheet.css" text/css">
 </head>
 <body>
+    
+    <script src="assets/javascript/game.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 
     <div>
         <h1 class="ff">FINAL FANTASY CREATURE COLLECTOR</h1>
@@ -27,29 +32,35 @@
         <p>Good luck!</p>
     </div>
     
-    <div>
+    <div class="goal">
         <h4>Goal Number: </h4>
     </div>
     
-    <div class="button-div">
-
+    <div class="winLose">
+        <p><h6>Wins: </h6></p>
+        <p class="wins">0</p>
     </div>
+    
+    <div class="winLose">
+        <p><h6>Losses: </h6></p>
+        <p class="losses">0</p>
+    </div>
+
+    <div class="score">
+        <h4>Current Score: </h4>
+        <p class="score-text"></p>
+    </div>
+    
+    <div class="button-div">
         <img class="button" src="assets/images/cactuar.png">
         <img class="button" src="assets/images/chocobo.jpg">
         <img class="button" src="assets/images/moogle.jpg">
         <img class="button" src="assets/images/moomba.png">
-    <div>
-        <p><h6>Wins: </h6></p>
-        <p><h6>Losses: </h6></p>
     </div>
     
     <div>
-        <h4>Current Score: </h4>
-    </div>
-
-    <div>
         <img class="play music-control" src="assets/images/play-button.png">
-        <img class="pause music-control" src="assets/images/pause-button.png">
+        <img class="stop music-control" src="assets/images/no-music-button.png">
     </div>
 </body>
 </html>
