@@ -2,7 +2,35 @@ body {
     background-image: url(https://3.bp.blogspot.com/-cW19DjLn2PI/W_dFfzHaMlI/AAAAAAAAAQQ/HPW9Md1DzBUdM4-6FNAkP79KhiuF5iXUwCHMYCw/s1600/final-fantasy-tactics-wallpaper-and-background-image-1366x768.jpg);
     background-repeat: no-repeat;
     background-size: auto;
-    background-color: black;
+    background-color: #84afb8;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 15px;
+    padding: 10px;
+    width: 40vw;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.rules {
+    background-image: linear-gradient(to right, #606060, rgb(34, 34, 34));
+    font-family: 'Courier New', Courier, monospace;
+    width: 55vw;
+    border: 5px solid white;
+    border-radius: 5%;
+    color: white;
+    padding: 15px;
+}
+
+.music-control {
+    height: 75px;
+    width: 75px;
+    align-content: center;
 }
 
 .button {
@@ -11,4 +39,10 @@ body {
     background-color: white;
     border: 10px solid black;
     border-radius: 25%
+}
+
+.ff {
+    font-family: 'Final Fantasy';
+    font-weight: normal;
+    font-style: normal;
 }

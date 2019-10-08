@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Final Fantasy';
+    src: url('subset-New.woff2') format('woff2'),
+        url('subset-New.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
