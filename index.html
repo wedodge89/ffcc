@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="assets/transfonter.org-20191008-124655/stylesheet.css" text/css">
+    <audio src="assets/chocoSong.mp3"></audio>
 </head>
 <body>
     
-    <script src="assets/javascript/game.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
 
     <div>
         <h1 class="ff">FINAL FANTASY CREATURE COLLECTOR</h1>
@@ -34,33 +35,43 @@
     
     <div class="goal">
         <h4>Goal Number: </h4>
+        <p id="goal-text"></p>
     </div>
     
     <div class="winLose">
         <p><h6>Wins: </h6></p>
-        <p class="wins">0</p>
+        <p id="win-text">0</p>
     </div>
     
     <div class="winLose">
         <p><h6>Losses: </h6></p>
-        <p class="losses">0</p>
+        <p id="loss-text">0</p>
     </div>
 
     <div class="score">
         <h4>Current Score: </h4>
-        <p class="score-text"></p>
+        <p id="score-text">0</p>
     </div>
     
     <div class="button-div">
-        <img class="button" src="assets/images/cactuar.png">
-        <img class="button" src="assets/images/chocobo.jpg">
-        <img class="button" src="assets/images/moogle.jpg">
-        <img class="button" src="assets/images/moomba.png">
+        <div class="button" id="cactuar" value="cactuarVal">
+            <img class="creature" src="assets/images/cactuar.png" alt="cactuar">
+        </div>
+        <div class="button" id="chocobo" value="chocoboVal">
+            <img class="creature" src="assets/images/chocobo.jpg" alt="chocobo">
+        </div>
+        <div class="button" id="moogle" value=moogleVal>
+            <img class="creature" src="assets/images/moogle.jpg" alt="moogle">
+        </div>
+        <div class="button" id="moomba" value=moombaVal>
+            <img class="creature" src="assets/images/moomba.png" alt="moomba">
+        </div>
     </div>
     
-    <div>
-        <img class="play music-control" src="assets/images/play-button.png">
-        <img class="stop music-control" src="assets/images/no-music-button.png">
+    <div class="audio">
+        <audio controls>
+            <source src="assets/chocoSong.mp3">
+        </audio>
     </div>
 </body>
 </html>

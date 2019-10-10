@@ -17,6 +17,10 @@ p {
     margin: 10px;
 }
 
+audio {
+    clear: left;
+}
+
 .rules {
     background-image: linear-gradient(to right, #606060, rgb(34, 34, 34));
     font-family: 'Courier New', Courier, monospace;
@@ -27,10 +31,8 @@ p {
     padding: 15px;
 }
 
-.music-control {
-    height: 75px;
-    width: 75px;
-    align-content: center;
+.audio {
+    clear: left;
 }
 
 .goal {
@@ -38,7 +40,8 @@ p {
     height: 100px;
     width: 100px;
     float: left;
-    border: 5px solid black;
+    border: 10px solid black;
+    margin: 5px;
 }
 
 .score {
@@ -46,7 +49,8 @@ p {
     height: 100px;
     width: 100px;
     float: left;
-    border: 5px solid black;
+    border: 10px solid black;
+    margin: 5px;
 }
 
 .button-div {
@@ -56,22 +60,51 @@ p {
 .winLose {
     float: left;
     background-color: black;
-    color: #c0ed25;
+    color: #25ed2f;
     height: 100px;
     width: 100px;
-    border: 5px solid gray;
+    border: 10px solid gray;
+    margin: 5px;
 }
 
 .button {
     height: 125px;
     width: 100px;
+    float: left;
     background-color: white;
     border: 10px solid black;
-    border-radius: 25%
+    border-radius: 25%;
+    margin: 5px;
+}
+
+.creature {
+    height: 100px;
+    width: 75px;
+    padding: 10px;
 }
 
 .ff {
     font-family: 'Final Fantasy';
     font-weight: normal;
     font-style: normal;
+}
+
+#win-text {
+    font-size: 60px;
+    text-align: center;
+}
+
+#loss-text {
+    font-size: 60px;
+    text-align: center;
+}
+
+#goal-text {
+    font-size: 60px;
+    text-align: center;
+}
+
+#score-text {
+    font-size: 60px;
+    text-align: center;
 }
