@@ -1,67 +1,88 @@
 $(document).ready(function() {
 
-// Variables
+// Set initial variables and populate Goal box
+    let cactuarVal = Math.floor(Math.random() * 11 + 1);
+    let chocoboVal = Math.floor(Math.random() * 11 + 1);
+    let moogleVal = Math.floor(Math.random() * 11 + 1);
+    let moombaVal = Math.floor(Math.random() * 11 + 1);
+    let score = 0
+    let goal = Math.floor(Math.random() * 101 + 19)
+    $("#goal-text").html(`<p class="box-text">${goal}</p>`)
+    let wins = 0;
+    $("#wins-text").html(`<p class="box-text">${wins}</p>`)
+    let losses = 0;
+    $("#losses-text").html(`<p class="box-text">${losses}</p>`)
+    console.log(cactuarVal)
+    console.log(chocoboVal)
+    console.log(moogleVal)
+    console.log(moombaVal)
+    console.log(score)
+    console.log(goal)
+    
+// Define calculate function for use in win or lose event
+function calculate() {
+    cactuarVal = Math.floor(Math.random() * 11 + 1);
+    chocoboVal = Math.floor(Math.random() * 11 + 1);
+    moogleVal = Math.floor(Math.random() * 11 + 1);
+    moombaVal = Math.floor(Math.random() * 11 + 1);
+    score = 0;
+    $("#score-text").html(`<p class="box-text">${score}</p>`)
+    goal = Math.floor(Math.random() * 101 + 19);
+    $("#goal-text").html(`<p class="box-text">${goal}</p>`)
+}
 
-let cactuarVal = Math.floor(Math.random() * 11 + 1);
-let chocoboVal = Math.floor(Math.random() * 11 + 1);
-let moogleVal = Math.floor(Math.random() * 11 + 1);
-let moombaVal = Math.floor(Math.random() * 11 + 1);
+function win() {
+    alert("Great job! You win!")
+    wins ++
+    $("#wins-text").html(`<p class="box-text">${wins}</p>`)
+    calculate()
+}
 
-// Between 19 and 120
-let goal = Math.floor(Math.random() * 101 + 19)
+function lose() {
+    alert("Too bad! Try again!")
+    losses ++
+    $("#losses-text").html(`<p class="box-text">${losses}</p>`)
+    calculate()
+}
 
-let wins = 0;
-let losses = 0;
-let score = 0;
+function checker() {
+    if (score == goal) {
+        win()
+    }
+    if (score > goal) {
+        lose()
+    }
+}
 
-$(".button").on("click", function() {
-    alert("Working")
+
+$("#cactuar").on("click", function() {
+    score = score + cactuarVal;
+    console.log(score)
+    $("#score-text").html(`<p class="box-text">${score}</p>`)
+    checker()
+});
+
+$("#chocobo").on("click", function() {
+    score = score + chocoboVal;
+    console.log(score)
+    $("#score-text").html(`<p class="box-text">${score}</p>`)
+    checker()
+});
+
+$("#moogle").on("click", function() {
+    score = score + moogleVal;
+    console.log(score)
+    $("#score-text").html(`<p class="box-text">${score}</p>`)
+    checker()
 });
 
 
-
-console.log(cactuarVal)
-console.log(chocoboVal)
-console.log(moogleVal)
-console.log(moombaVal)
-console.log(score)
-console.log(goal)
-
-// if (score === goal) {
-//     win()
-// }
-
-// if (score > goal) {
-//     lose()
-// }
-
-
-// Once I figure out how to do it, this function will be used to select new random values for any variable.
-// function recalc() {
-
-// }
-
-// This function recalculates values for the Goal Number and each of the buttons.
-// function reset() {
-    // recalc(goal);
-    // recalc(cactuarVal);
-    // recalc(chocoboVal);
-    // recalc(moogleVal);
-    // recalc(moombaVal);
-//     score = 0;
-// }
-
-// function win() {
-//     alert("Great job! You win!")
-//     wins ++
-//     reset()
-
-// }
-
-// function lose() {
-//     alert("You busted! Try again!")
-//     losses ++
-//     reset()
-// }
+// Moomba button functionality
+$("#moomba").on("click", function() {
+    score = score + moombaVal;
+    console.log(score)
+    $("#score-text").html(`<p class="box-text">${score}</p>`)
+    checker()
+});
 
 });

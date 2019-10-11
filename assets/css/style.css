@@ -89,22 +89,7 @@ audio {
     font-style: normal;
 }
 
-#win-text {
-    font-size: 60px;
-    text-align: center;
-}
-
-#loss-text {
-    font-size: 60px;
-    text-align: center;
-}
-
-#goal-text {
-    font-size: 60px;
-    text-align: center;
-}
-
-#score-text {
+.box-text {
     font-size: 60px;
     text-align: center;
 }
