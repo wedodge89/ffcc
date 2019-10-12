@@ -13,8 +13,8 @@ $(document).ready(function() {
     let losses = 0;
     $("#losses-text").html(`<p class="box-text">${losses}</p>`)
 
-    // My attempt at preventing repeating values.
-    if (cactuarVal === chocoboVal ||
+    // Preventing repeating values between buttons.
+    while (cactuarVal === chocoboVal ||
         cactuarVal === moogleVal ||
         cactuarVal === moombaVal ||
         chocoboVal === moogleVal ||
@@ -64,7 +64,6 @@ function checker() {
 // Cactuar button functionality
 $("#cactuar").on("click", function() {
     score = score + cactuarVal;
-    console.log(score)
     $("#score-text").html(`<p class="box-text">${score}</p>`)
     checker()
 });
@@ -73,7 +72,6 @@ $("#cactuar").on("click", function() {
 // Chocobo button functionality
 $("#chocobo").on("click", function() {
     score = score + chocoboVal;
-    console.log(score)
     $("#score-text").html(`<p class="box-text">${score}</p>`)
     checker()
 });
@@ -81,7 +79,6 @@ $("#chocobo").on("click", function() {
 // Moogle button functionality
 $("#moogle").on("click", function() {
     score = score + moogleVal;
-    console.log(score)
     $("#score-text").html(`<p class="box-text">${score}</p>`)
     checker()
 });
@@ -90,7 +87,6 @@ $("#moogle").on("click", function() {
 // Moomba button functionality
 $("#moomba").on("click", function() {
     score = score + moombaVal;
-    console.log(score)
     $("#score-text").html(`<p class="box-text">${score}</p>`)
     checker()
 });
