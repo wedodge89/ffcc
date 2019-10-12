@@ -12,14 +12,18 @@ $(document).ready(function() {
     $("#wins-text").html(`<p class="box-text">${wins}</p>`)
     let losses = 0;
     $("#losses-text").html(`<p class="box-text">${losses}</p>`)
-    console.log(cactuarVal)
-    console.log(chocoboVal)
-    console.log(moogleVal)
-    console.log(moombaVal)
-    console.log(score)
-    console.log(goal)
+
+    // My attempt at preventing repeating values.
+    if (cactuarVal === chocoboVal ||
+        cactuarVal === moogleVal ||
+        cactuarVal === moombaVal ||
+        chocoboVal === moogleVal ||
+        chocoboVal === moombaVal ||
+        moogleVal === moombaVal) {
+            calculate()
+        }
     
-// Define calculate function for use in win or lose event
+    // Define calculate function for use in win or lose event
 function calculate() {
     cactuarVal = Math.floor(Math.random() * 11 + 1);
     chocoboVal = Math.floor(Math.random() * 11 + 1);
@@ -31,6 +35,7 @@ function calculate() {
     $("#goal-text").html(`<p class="box-text">${goal}</p>`)
 }
 
+// Win state: alert and iterate win, recalculate variables
 function win() {
     alert("Great job! You win!")
     wins ++
@@ -38,6 +43,7 @@ function win() {
     calculate()
 }
 
+// Lose state: alert and iterate loss, recalculate variables
 function lose() {
     alert("Too bad! Try again!")
     losses ++
@@ -45,6 +51,7 @@ function lose() {
     calculate()
 }
 
+// Compare scores to determine win/loss state
 function checker() {
     if (score == goal) {
         win()
@@ -54,7 +61,7 @@ function checker() {
     }
 }
 
-
+// Cactuar button functionality
 $("#cactuar").on("click", function() {
     score = score + cactuarVal;
     console.log(score)
@@ -62,6 +69,8 @@ $("#cactuar").on("click", function() {
     checker()
 });
 
+
+// Chocobo button functionality
 $("#chocobo").on("click", function() {
     score = score + chocoboVal;
     console.log(score)
@@ -69,6 +78,7 @@ $("#chocobo").on("click", function() {
     checker()
 });
 
+// Moogle button functionality
 $("#moogle").on("click", function() {
     score = score + moogleVal;
     console.log(score)
