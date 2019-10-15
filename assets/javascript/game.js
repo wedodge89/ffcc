@@ -25,30 +25,30 @@ $(document).ready(function() {
     
     // Define calculate function for use in win or lose event
 function calculate() {
-    cactuarVal = Math.floor(Math.random() * 11 + 1);
-    chocoboVal = Math.floor(Math.random() * 11 + 1);
-    moogleVal = Math.floor(Math.random() * 11 + 1);
-    moombaVal = Math.floor(Math.random() * 11 + 1);
+    cactuarVal = Math.floor(Math.random() * 11) + 1;
+    chocoboVal = Math.floor(Math.random() * 11) + 1;
+    moogleVal = Math.floor(Math.random() * 11) + 1;
+    moombaVal = Math.floor(Math.random() * 11) + 1;
     score = 0;
     $("#score-text").html(`<p class="box-text">${score}</p>`)
-    goal = Math.floor(Math.random() * 101 + 19);
+    goal = Math.floor(Math.random() * 101) + 19;
     $("#goal-text").html(`<p class="box-text">${goal}</p>`)
 }
 
 // Win state: alert and iterate win, recalculate variables
 function win() {
-    alert("Great job! You win!")
     wins ++
     $("#wins-text").html(`<p class="box-text">${wins}</p>`)
     calculate()
+    alert("Great job! You win!")
 }
 
 // Lose state: alert and iterate loss, recalculate variables
 function lose() {
-    alert("Too bad! Try again!")
     losses ++
     $("#losses-text").html(`<p class="box-text">${losses}</p>`)
     calculate()
+    alert("Too bad! Try again!")
 }
 
 // Compare scores to determine win/loss state
@@ -90,5 +90,11 @@ $("#moomba").on("click", function() {
     $("#score-text").html(`<p class="box-text">${score}</p>`)
     checker()
 });
+
+$(window).on("resize", function() {
+    if (screen.width < 522) {
+      $("#statArea").prepend($(".winLose"));
+    }
+  });
 
 });
