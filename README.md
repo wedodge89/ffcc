@@ -1,2 +1,2 @@
 # unit-4-game
-It could be a crystal collector game; it could be a silly little RPG. Only time will tell. 
+A "Crystal Collector" type game that uses jQuery to generate random values for all buttons and goal.
