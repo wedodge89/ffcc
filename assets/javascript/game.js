@@ -14,14 +14,16 @@ $(document).ready(function() {
     $("#losses-text").html(`<p class="box-text">${losses}</p>`)
 
     // Preventing repeating values between buttons.
-    while (cactuarVal === chocoboVal ||
-        cactuarVal === moogleVal ||
-        cactuarVal === moombaVal ||
-        chocoboVal === moogleVal ||
-        chocoboVal === moombaVal ||
-        moogleVal === moombaVal) {
-            calculate()
-        }
+    function valueCheck () {
+        if (cactuarVal === chocoboVal ||
+            cactuarVal === moogleVal ||
+            cactuarVal === moombaVal ||
+            chocoboVal === moogleVal ||
+            chocoboVal === moombaVal ||
+            moogleVal === moombaVal) {
+                calculate()
+            }
+    };
     
     // Define calculate function for use in win or lose event
 function calculate() {
@@ -29,6 +31,7 @@ function calculate() {
     chocoboVal = Math.floor(Math.random() * 11) + 1;
     moogleVal = Math.floor(Math.random() * 11) + 1;
     moombaVal = Math.floor(Math.random() * 11) + 1;
+    valueCheck()
     score = 0;
     $("#score-text").html(`<p class="box-text">${score}</p>`)
     goal = Math.floor(Math.random() * 101) + 19;
@@ -53,7 +56,7 @@ function lose() {
 
 // Compare scores to determine win/loss state
 function checker() {
-    if (score == goal) {
+    if (score === goal) {
         win()
     }
     if (score > goal) {
@@ -93,8 +96,13 @@ $("#moomba").on("click", function() {
 
 $(window).on("resize", function() {
     if (screen.width < 522) {
-      $("#statArea").prepend($(".winLose"));
+        $("#statArea").prepend($(".winLose"));
     }
-  });
+    
+});
 
+console.log(moombaVal)
+console.log(moogleVal)
+console.log(chocoboVal)
+console.log(cactuarVal)
 });
