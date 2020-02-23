@@ -71,20 +71,24 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Div containing each of the four buttons -->
     <div class="button-div">
-        <div class="button" id="cactuar" value="cactuarVal">
+        <div class="button" id="cactuar" value="cactuarVal" onclick="document.getElementById('cactuarSound').play()">
             <img class="creature" src="assets/images/cactuar.png" alt="cactuar">
+            <audio id="cactuarSound" src="assets/audio/cactuarSound.mp3"></audio>
         </div>
-        <div class="button" id="chocobo" value="chocoboVal">
+        <div class="button" id="chocobo" value="chocoboVal" onclick="document.getElementById('chocoboSound').play()">
             <img class="creature" src="assets/images/chocobo.jpg" alt="chocobo">
+            <audio id="chocoboSound" src="assets/audio/chocoboSound.mp3"></audio>
         </div>
-        <div class="button" id="moogle" value=moogleVal>
+        <div class="button" id="moogle" value=moogleVal onclick="document.getElementById('moogleSound').play()">
             <img class="creature" src="assets/images/moogle.jpg" alt="moogle">
+            <audio id="moogleSound" src="assets/audio/moogleSound.mp3"></audio>
         </div>
-        <div class="button" id="moomba" value=moombaVal>
+        <div class="button" id="moomba" value=moombaVal onclick="document.getElementById('moombaSound').play()">
             <img class="creature" src="assets/images/moomba.png" alt="moomba">
+            <audio id="moombaSound" src="assets/audio/moombaSound.mp3"></audio>
         </div>
     </div>
     
