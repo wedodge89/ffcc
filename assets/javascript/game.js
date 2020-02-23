@@ -1,20 +1,14 @@
 $(document).ready(function() {
 
 // Set initial variables and populate Goal box
-    let cactuarVal = Math.floor(Math.random() * 11 + 1);
-    let chocoboVal = Math.floor(Math.random() * 11 + 1);
-    let moogleVal = Math.floor(Math.random() * 11 + 1);
-    let moombaVal = Math.floor(Math.random() * 11 + 1);
-    let score = 0
-    let goal = Math.floor(Math.random() * 101 + 19)
-    $("#goal-text").html(`<p class="box-text">${goal}</p>`)
+    calculate();
     let wins = 0;
     $("#wins-text").html(`<p class="box-text">${wins}</p>`)
     let losses = 0;
     $("#losses-text").html(`<p class="box-text">${losses}</p>`)
 
     // Preventing repeating values between buttons.
-    function valueCheck() {
+    function sameValueCheck() {
         if (cactuarVal === chocoboVal ||
             cactuarVal === moogleVal ||
             cactuarVal === moombaVal ||
@@ -22,10 +16,17 @@ $(document).ready(function() {
             chocoboVal === moombaVal ||
             moogleVal === moombaVal) {
                 calculate();
-                return
             };
-        valueCheck()
     };
+
+    function evenCheck() {
+        if (cactuarVal % 2 === 1 &&
+            chocoboVal % 2 === 1 &&
+            moogleVal % 2 === 1 &&
+            moombaVal % 2 ===1 ) {
+                calculate();
+            }
+    }
     
     // Define calculate function for use in win or lose event
     function calculate() {
@@ -33,7 +34,12 @@ $(document).ready(function() {
         chocoboVal = Math.floor(Math.random() * 11) + 1;
         moogleVal = Math.floor(Math.random() * 11) + 1;
         moombaVal = Math.floor(Math.random() * 11) + 1;
-        valueCheck();
+        console.log(cactuarVal)
+        console.log(chocoboVal)
+        console.log(moogleVal)
+        console.log(moombaVal)
+        sameValueCheck();
+        evenCheck();
         score = 0;
         $("#score-text").html(`<p class="box-text">${score}</p>`)
         goal = Math.floor(Math.random() * 101) + 19;
