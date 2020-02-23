@@ -34,20 +34,12 @@ $(document).ready(function() {
         chocoboVal = Math.floor(Math.random() * 11) + 1;
         moogleVal = Math.floor(Math.random() * 11) + 1;
         moombaVal = Math.floor(Math.random() * 11) + 1;
-        console.log(cactuarVal)
-        console.log(chocoboVal)
-        console.log(moogleVal)
-        console.log(moombaVal)
         sameValueCheck();
         evenCheck();
         score = 0;
         $("#score-text").html(`<p class="box-text">${score}</p>`)
         goal = Math.floor(Math.random() * 101) + 19;
         $("#goal-text").html(`<p class="box-text">${goal}</p>`)
-        console.log(cactuarVal)
-        console.log(chocoboVal)
-        console.log(moogleVal)
-        console.log(moombaVal)
     }
 
     // Win state: alert and iterate win, recalculate variables
