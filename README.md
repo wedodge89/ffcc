@@ -28,3 +28,4 @@ The player then clicks the buttons, intuiting their values in an effort to incre
     - Final Fantasy font downloaded online
     - Electric de Chocobo (Acapella) by Mr. Dooves & F1shard (Triforcefilms on YouTube)
         - https://www.youtube.com/watch?v=Rzavr85aaGA
+    - Creature sound effects from various Final Fantasy games
